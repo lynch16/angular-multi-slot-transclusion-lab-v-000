@@ -1,10 +1,16 @@
 function UserProfile() {
 	return {
-		transclude: true,
+		transclude: {
+			name: 'h4',
+			pos: 'h6',
+			descr: 'p'
+		},
 		template: [
 			'<div>',
 				'<h3>User Profile</h3>',
-				'<div ng-transclude></div>',
+				'Name: <div ng-transclude="name"></div>',
+				'Position: <div ng-transclude="pos"></div>',
+				'Description: <div ng-transclude="descr"></div>',
 			'</div>'
 		].join('')
 	}
